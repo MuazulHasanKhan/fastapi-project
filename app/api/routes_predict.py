@@ -18,5 +18,5 @@ class CarFeatures(BaseModel):
 
 @router.post('/predict')
 def predict_price(car: CarFeatures, user = Depends(get_current_user), _= Depends(get_api_key)):
-    prediction = predict_car_price(car.model_dum()) # converts to python dict
+    prediction = predict_car_price(car.model_dump()) # converts to python dict
     return {'predicted_price': prediction}
