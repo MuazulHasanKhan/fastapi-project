@@ -13,7 +13,7 @@ def create_token(data: dict, expire_minutes: int = 30):
 
 def verify_token(token: str):
     try:
-        payload = jwt.decodepip (token, settings.JWT_SECRET_KEY, algorithms = settings.JWT_ALGORITHM)
+        payload = jwt.decode(token, settings.JWT_SECRET_KEY, algorithms = [settings.JWT_ALGORITHM])
     except JWTError:
         return None
 
