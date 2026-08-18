@@ -35,7 +35,6 @@ joblib==1.5.3
 jose==1.0.0
 joserfc==1.7.4
 jwt==1.4.0
-locust==2.46.3
 MarkupSafe==3.0.3
 msgpack==1.2.1
 narwhals==2.24.0
